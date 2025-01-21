@@ -14,6 +14,7 @@ import (
     "github.com/google/uuid"
 )
 
+
 // Receipt structure
 type Receipt struct {
     Retailer     string `json:"retailer"`
