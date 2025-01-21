@@ -11,6 +11,7 @@ import (
     "github.com/google/uuid"
 )
 
+// Receipt structure
 type Receipt struct {
     Retailer     string `json:"retailer"`
     PurchaseDate string `json:"purchaseDate"`
@@ -19,17 +20,21 @@ type Receipt struct {
     Items        []Item `json:"items"`
 }
 
+// Item structure
 type Item struct {
     ShortDescription string `json:"shortDescription"`
     Price            string `json:"price"`
 }
 
+// In-memory storage
 var receipts = make(map[string]int)
 
+// Dummy function to calculate points
 func calculatePoints(receipt Receipt) int {
-    return 100
+    return 100 // Placeholder logic
 }
 
+// ProcessReceipt handles POST /receipts/process
 func ProcessReceipt(w http.ResponseWriter, r *http.Request) {
     var receipt Receipt
     if err := json.NewDecoder(r.Body).Decode(&receipt); err != nil {
@@ -43,6 +48,7 @@ func ProcessReceipt(w http.ResponseWriter, r *http.Request) {
     json.NewEncoder(w).Encode(map[string]string{"id": receiptID})
 }
 
+// GetPoints handles GET /receipts/{id}/points
 func GetPoints(w http.ResponseWriter, r *http.Request) {
     receiptID := strings.TrimPrefix(r.URL.Path, "/receipts/")
     receiptID = strings.TrimSuffix(receiptID, "/points")
