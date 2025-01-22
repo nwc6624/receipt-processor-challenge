@@ -1,5 +1,6 @@
 # Receipt Processor
-### Developed by Noah Caulfield (GitHub: [nwc6624](https://github.com/nwc6624))
+### Developed by Noah Caulfield (GitHub: [nwc6624](https://github.com/nwc6624)) 
+Intended for the **Backend Engineer** application coding assignment. 
 
 This is a lightweight receipt processing web service written in Go. It allows users to submit receipts, assigns them a unique identifier, and calculates points based on a predefined set of rules.
 
