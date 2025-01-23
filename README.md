@@ -1,4 +1,4 @@
-# Receipt Processor
+# Receipt Processor Assignment Answer
 ### Developed by Noah Caulfield (GitHub: [nwc6624](https://github.com/nwc6624)) 
 Intended for the **Backend Engineer** application coding assignment. 
 
@@ -186,3 +186,9 @@ curl -X POST http://localhost:8080/receipts/process      -H "Content-Type: appli
 | Purchase day is **even (2)** | **0** |
 | Purchase time **not between 2-4 PM** | **0** |
 | **Total Points** | **31** |
+
+
+### ✅ **Example Test Output**
+
+![image](https://github.com/user-attachments/assets/d6a9c528-e2dc-4da4-b501-4ced9d770203)
+
